@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="HeroContiner">
+        <div class="sercal">
+            <button class="Btn1">Sin up</button>
+            <button class="Btn2"> Login </button>
+        </div>
+        <div class="SingupContiner">
+             <h1>Sin up Form</h1>
+            <form class="form1" action="">
+                <input type="text" placeholder="Name" required>
+                <input type="number" placeholder="Number" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="submit">submit</button>
+            </form>
+        </div>
+        <div class="loginContiner">
+            <h1>Login Form</h1>
+            <form class="form2" action="">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="submit">login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var sin = document.querySelector(".SingupContiner");
+        var log = document.querySelector(".loginContiner");
+        var ser = document.querySelector(".sercal");
+        var sinb = document.querySelector(".Btn1");
+        var logb = document.querySelector(".Btn2");
+
+        sinb.addEventListener("click", () => {
+            sin.style.right = "0%";
+            log.style.left = "100%";
+            ser.style.right = "-50%";
+        });
+
+        logb.addEventListener("click", () => {
+            sin.style.right = "100%";
+            log.style.left = "0%";
+            ser.style.right = "50%";
+        });
+        
+    </script>
+</body>
+</html>

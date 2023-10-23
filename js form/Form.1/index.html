@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+     
+    <head>
+	     <meta charset="UTF-8">
+	     <title>calculater</title>
+	     <link rel="stylesheet" href="style.css">
+    </head>
+	
+    <body>
+	     
+		 <div class="backImg">
+		     <div class="formBody">
+			     <div class="button">
+				     <button id="button" type="button" onclick="sinup()"> Log in </button>
+				     <button id="button" type="button" onclick="ragister()"> Sin up </button>
+					 <button id="btn"></button>
+				 </div>
+				 <div class="image">
+				     <a href="#"><image id="image" src="img/1.png"></a>
+				     <a href="#"><image id="image" src="img/2.png"></a>
+				     <a href="#"><image id="image" src="img/3.png"></a>
+				 </div>
+				     <div id="left" class="sinup">
+					     <input id="input" type="text" placeholder="User id">
+					     <input id="input" type="password" placeholder="Enter password"><br/><br/>
+					     <input type="checkbox"> <span>Are you agree to log in?</span>
+						 <button id="logIn"> Log in </button>
+				     </div>
+					 
+					 <div id="right" class="ragister">
+					     <input id="input" type="text" placeholder="User id">
+					     <input id="input" type="email" placeholder="Enter email">
+					     <input id="input" type="password" placeholder="Enter password"><br/><br/>
+					     <input type="checkbox"> <span>Are you agree to Sin up?</span>
+						 <button id="logIn"> Sin up </button>
+				     </div>
+			 </div>
+		 </div>
+	
+		 <script> 
+		     var x = document.getElementById("btn");
+		     var y = document.getElementById("left");
+		     var z = document.getElementById("right");
+			 function ragister(){
+			     x.style.left="110px";
+			     y.style.left="-380px";
+			     z.style.left="0px";
+			 }
+			 function sinup(){
+			     x.style.left="0px";
+			     y.style.left="0px";
+			     z.style.left="380px";
+			 }
+		 </script> 
+    </body>
+	
+</html>
