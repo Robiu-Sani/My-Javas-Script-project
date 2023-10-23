@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mainBody">
+        <div class="calculater">
+            <div class="answer">
+                <input type="text" class="result">
+                <div class="div"></div>
+            </div>
+            <div class="allBtn">
+                <table>
+
+                    <tr class="Hbtn">
+                        <td><input class="Btn" type="button" value="c" onclick="delateMe()"></td>
+                        <td><input class="Btn" type="button" value="(" onclick="calcute('(')"></td>
+                        <td><input class="Btn" type="button" value=")" onclick="calcute(')')"></td>
+                        <td><input class="Btn" type="button" value="pi" onclick="calcute('3.1416')"></td>
+                    </tr>
+
+                    <tr class="Hbtn">
+                        <td><input class="Btn" type="button" value="7" onclick="calcute('7')"></td>
+                        <td><input class="Btn" type="button" value="8" onclick="calcute('8')"></td>
+                        <td><input class="Btn" type="button" value="9" onclick="calcute('9')"></td>
+                        <td><input class="Btn" type="button" value="+" onclick="calcute('+')"></td>
+                    </tr>
+
+                    <tr class="Hbtn">
+                        <td><input class="Btn" type="button" value="4" onclick="calcute('4')"></td>
+                        <td><input class="Btn" type="button" value="5" onclick="calcute('5')"></td>
+                        <td><input class="Btn" type="button" value="6" onclick="calcute('6')"></td>
+                        <td><input class="Btn" type="button" value="-" onclick="calcute('-')"></td>
+                    </tr>
+
+                    <tr class="Hbtn">
+                        <td><input class="Btn" type="button" value="1" onclick="calcute('1')"></td>
+                        <td><input class="Btn" type="button" value="2" onclick="calcute('2')"></td>
+                        <td><input class="Btn" type="button" value="3" onclick="calcute('3')"></td>
+                        <td><input class="Btn" type="button" value="*" onclick="calcute('*')"></td>
+                    </tr>
+
+                    <tr class="Hbtn">
+                        <td><input class="Btn" type="button" value="0" onclick="calcute('0')"></td>
+                        <td><input class="Btn" type="button" value="." onclick="calcute('.')"></td>
+                        <td><input class="Btn" type="button" value="/" onclick="calcute('/')"></td>
+                        <td><input class="Btn" type="button" value="=" onclick="answer('=')"></td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var a = document.querySelector(".result");
+
+        function delateMe(){
+            a.value = "";
+        }
+        function calcute(event){
+            a.value += event;
+        }
+        function answer(){
+            var b = eval(a.value);
+            a.value = b;
+        }
+    </script>
+</body>
+</html>
